@@ -1,0 +1,298 @@
+html {
+    width: 100%;
+    height: 100%;
+    background-color: #cdcfd1; 
+}
+
+body {
+    background-color: white;
+    margin: 0 auto;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr 1.5fr 0.5fr;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-row-gap: 0px;
+    font-family: 'Roboto', sans-serif; 
+}
+
+h2, h3, h4 {
+    font-family: 'Roboto', sans-serif; 
+    color: black;
+    padding: 10px 20px 10px 20px;
+    margin: 10px 20px 10px 20px;
+}
+
+a {
+    font-family: 'Roboto', sans-serif; 
+    color: inherit;
+    text-decoration: none;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif; 
+}
+
+/* Header layout */
+
+header {
+    background-color: white;
+    grid-area: 1 / 1 / 1 / 5;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+#navbar ul{
+    padding-left: 0px;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+#navbar ul li a{
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 10px 10px 10px 10px;
+    font-weight: bold;
+}
+
+#navbar ul li a:focus, #navbar li a:hover, #navbar ul li a.current{
+    background-color: black;
+    color: white;
+}
+
+main {
+    grid-area: 2 / 1 / 7 / 5;
+}
+
+/* Banner layout */
+
+#greetings div {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(../images/fistBump.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#greetings div div{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+#greetings div h1, #greetings div p{
+    text-align: center;
+    color: white;
+}
+
+#greetings div button{
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    background-color: gray;
+    color: white;
+    border-radius: 10px;
+}
+
+#greetings div p:last-child {
+    background-color: #e0e0e0;
+    color: black;
+    border-radius: 10px;
+}
+
+/* First Form layout */
+
+#appform {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr 1.5fr 0.5fr;
+    grid-template-rows: auto auto auto auto;
+    grid-row-gap: 0px;
+    border-bottom: 2px black solid;
+    padding-bottom: 20px;
+}
+
+#appform h2 {
+    grid-area: 1 / 1 / 2 / 4;
+}
+
+#appform form {
+    grid-area: 2 / 2 / 4 / 4;
+}
+
+.form1items {
+    margin: 20px 0px 20px 0px;
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    align-items: center;
+}
+
+
+.form1items textarea {
+    resize: vertical;
+}
+
+.selPositions {
+    display: grid;
+    grid-template-columns: 25px 1fr 25px 1fr;
+    align-items: center;
+    text-align: left;
+    border-bottom: 1px solid black;
+}
+
+.form1items:nth-child(9) {
+    grid-template-columns: 1fr 1fr;
+}
+
+.form1items:last-child {
+    margin: 0px;
+    padding-left: 0px;
+    grid-template-columns: 1fr 1fr;
+    align-items: normal;
+}
+
+/* Hobbies Video Layout */
+
+#hobbies {
+    background-color: #e0e0e0;
+    padding-top: 1px;
+    border-bottom: 2px black solid;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+#hobbiesGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.hobInternal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    background-color: white;
+}
+
+.hobInternal div {
+    max-width: 260px;
+    max-height: 160px;
+}
+
+.hobInternal div video {
+    width: 100%;
+    height: 100%;
+}
+
+.hobInternal h3, p {
+    margin: 0px;
+    color: black;
+    padding: 10px;
+}
+
+.hobInternal p {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: justify;
+}
+
+/* Form 2 */
+
+#formElements {
+    border-bottom: 2px black solid;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.form2 {
+    margin: 20px 0px 20px 0px;
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: 120px 1fr 200px;
+    align-items: center;
+}
+
+.form2:first-child {
+    grid-template-columns: 120px 100px 265px;
+}
+
+.form2:nth-child(6) {
+    grid-template-columns: 120px 50px 1fr;
+}
+
+.form2:nth-child(10) {
+    grid-template-columns: 160px 50px 1fr;
+}
+
+.form2:last-child {
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: left;
+}
+
+.form2 small {
+    font-size: 0.8em;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.form2 button {
+    background-color: white;
+    border: 0px;
+}
+
+/* Layouts that applies for both forms */
+
+input[type=text], input[type=email], input[type=file], textarea {
+    border:0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+input:required, select:required {
+    border: 1px solid red;
+}
+
+input:valid, select:valid {
+    border: 1px solid black;
+}
+
+label {
+    font-weight: bold;
+}
+
+/* Video Tutorial Layout */
+
+#tutorial {
+    background-color: #e0e0e0;
+    padding-top: 1px;
+    border-bottom: 2px black solid;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.videoGrid {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 0.5fr;
+}
+
+/* Image Mapping Layout */
+
+#mapping {
+    padding-top: 1px;
+    border-bottom: 2px black solid;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+/* Footer Layout */
+
+footer {
+    background-color: white;
+    grid-area: 9 / 1 / 7 / 5;
+    border-bottom: 2px black solid;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
